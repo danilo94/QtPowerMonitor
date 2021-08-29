@@ -1,8 +1,7 @@
 QT       += core gui
+CONFIG += c++11
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
-CONFIG += c++11
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -11,6 +10,8 @@ CONFIG += c++11
 include(gui/gui.pri)
 include(serial/serial.pri)
 include(digester/digester.pri)
+
+SOURCES += main.cpp
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
